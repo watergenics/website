@@ -5842,6 +5842,8 @@ address p {
 
 .banner-demo {
     background-image: url("../img/water-banner.jpg") !important;
+    background-size: cover;
+
 }
 
 .banner-onedot {
