@@ -2813,7 +2813,7 @@ dl.toggle.time-line:before {
   position: absolute;
   right: 0;
   bottom: 5px;
-  width: 70%;
+  width: 90%;
   padding: 10px 20px;
   text-align: right;
   background: rgba(0, 0, 0, .7);
