@@ -3151,7 +3151,7 @@ body {
     left: 50%;
     margin-left: -11px;
     text-transform: uppercase;
-    color: #fff;
+    color: #000;
     font-size: 12px;
 }
 
@@ -3162,7 +3162,7 @@ body {
     margin-bottom: 5px;
     margin-left: 5px;
     content: "";
-    border: 2px solid #fff;
+    border: 2px solid #000;
     border-radius: 15px;
 }
 
@@ -5841,9 +5841,9 @@ address p {
 }
 
 .banner-demo {
-    background-image: url("../img/water-banner.jpg") !important;
-    background-size: cover;
-
+    background-image: url("../img/logo.gif") !important;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .banner-onedot {
