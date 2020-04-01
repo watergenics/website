@@ -5841,7 +5841,7 @@ address p {
 }
 
 .banner-demo {
-    background-image: url("../img/logo.gif") !important;
+    background-image: url("../img/banner.gif") !important;
     background-repeat: no-repeat;
     background-position: center center;
 }
