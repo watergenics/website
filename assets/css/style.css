@@ -5845,6 +5845,16 @@ address p {
     background-repeat: no-repeat;
     background-position: center center;
 }
+@media (max-width: 900px) {
+    .banner-demo {
+        background-size: 80%;
+    }
+}
+@media (min-width: 900px) {
+    .banner-demo {
+        background-size: auto;
+    }
+}
 
 .banner-onedot {
     background-image: url("../img/banner/onedot.jpg") !important;
