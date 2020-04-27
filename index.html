@@ -33,7 +33,7 @@
              padding: 2rem 2rem;
          }
          header > nav > ul > li > a {
-             color: #9b915d;
+             color: #ffffff;
          }
          body > header > h1 {
              text-shadow: 2px 2px 11px rgba(0,0,0,0.75);
@@ -50,6 +50,32 @@
          nav {
              margin-bottom: 0;
          }
+
+         @media only screen and (max-width: 400px) {
+             header > nav > ul {
+                 display: none;
+             }
+
+             header > nav > a {
+                margin: auto;
+             }
+             #dev-partners  a {
+                 margin-bottom: 2rem;
+             }
+         }
+
+         @media only screen and (max-width: 800px) {
+             #dev-partners  a {
+                 margin-right: 2rem;
+                 margin-bottom: 2rem;
+             }
+         }
+
+         @media only screen and (min-width: 800px) {
+             #dev-partners  a {
+                 margin-right: 2rem;
+             }
+         }
         </style>
     </head>
 
@@ -60,7 +86,6 @@
                     <img alt="Logo" src="assets/img/logo_white.svg" height="30">
                 </a>
                 <ul>
-                    <li>Home</li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#team">Team</a></li>
                 </ul>
@@ -72,8 +97,7 @@
             <section id="about">
                 <header>
                     <h2>
-                        We develop a novel sensor and a machine learning platform for measuring chemical compounds in water,
-                        with application in aquaculture, agriculture and environmental monitoring
+                        We are developing a novel sensor and machine learning platform for effective nutrient management in aquaculture, agriculture and for environmental monitoring
                     </h2>
                     <br />
                     <h2><i>Follow the Water</i></h2>
@@ -84,9 +108,9 @@
                 <header>
                 </header>
                 <article style="width:70%">
-                    <p>
-                        <img src="assets/img/globe-americas-solid.svg" alt="Globe" height="80" />
-                    </p>
+                    <!-- <p>
+                         <img src="assets/img/globe-americas-solid.svg" alt="Globe" height="80" />
+                         </p> -->
                     <h2>Problem</h2>
                     <p>
                         <aside>
@@ -110,9 +134,9 @@
 
                     <hr />
 
-                    <p>
-                        <img src="assets/img/lightbulb-solid.svg" alt="Globe" height="80" />
-                    </p>
+                    <!-- <p>
+                         <img src="assets/img/lightbulb-solid.svg" alt="Globe" height="80" />
+                         </p> -->
                     <h2>Solution</h2>
                     <p>
                         <aside>In-situ water quality sensor network to measure nutrient run-offs in real-time</aside>
@@ -124,26 +148,26 @@
 
                     <hr />
 
-                    <p>
-                        <img src="assets/img/people-arrows-solid.svg" alt="Globe" height="80" />
-                    </p>
+                    <!-- <p>
+                         <img src="assets/img/people-arrows-solid.svg" alt="Globe" height="80" />
+                         </p> -->
                     <h2>Mission</h2>
                     <p><aside>Our mission is to foster the responsible use of water for food production</aside></p>
 
-                    <hr />
+                    <!-- <hr /> -->
 
-                    <p>
-                        <img src="assets/img/eye-solid.svg" alt="Globe" height="80" />
-                    </p>
-                    <h2>Vision</h2>
-                    <p><aside>A world-wide network of sensors to testify water quality.</aside></p>
-                    <p>Water is a fundamental right for every living organism. Making water quality visible everywhere, at any time, is our vision.</p>
+                    <!-- <p>
+                         <img src="assets/img/eye-solid.svg" alt="Globe" height="80" />
+                         </p> -->
+                    <!-- <h2>Vision</h2>
+                         <p><aside>A world-wide network of sensors to testify water quality.</aside></p>
+                         <p>Water is a fundamental right for every living organism. Making water quality visible everywhere, at any time, is our vision.</p> -->
 
                 </article>
             </article>
             <hr />
 
-            <section>
+            <section id="dev-partners">
                 <header>
                     <h2>Development Partners</h2>
                 </header>
@@ -151,11 +175,9 @@
                     <a href="http://www.crevetec.be">
                         <img src="assets/img/partners/crevetec.png" alt="Crevetec" style="vertical-align: middle;"/>
                     </a>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <a href="http://www.zalf.de">
                         <img src="assets/img/partners/logo_zalf.jpg" alt="Zalf" style="vertical-align: middle;"/>
                     </a>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <a href="https://www.izm.fraunhofer.de/">
                         <img src="assets/img/partners/izm_190x52.gif" alt="Frauenhofer IZM" style="vertical-align: middle;"/>
                     </a>
