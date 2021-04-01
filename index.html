@@ -1,309 +1,191 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Watergenics</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta charset="utf-8" content="" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-        <meta property="og:title" content="Watergenics" />
-        <meta property="og:description" content="Real-time water-quality sensor for aquafarming" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://www.watergenics.tech/" />
-        <meta property="og:updated_time" content="2020-04-15:11:56+01:00" />
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
 
-        <meta name="twitter:card" content="summary"/>
-        <meta name="twitter:title" content="Watergenics"/>
-        <meta name="twitter:description" content="Real-time water-quality sensor for aquafarming"/>
+  <meta property="og:title" content="Watergenics">
+  <meta property="og:description" content="Making water quaity visible">
+  <meta property="og:image" content="https://depths.sawaiz.com/depthsLogo.png">
+  <meta property="og:url" content="https://depths.sawaiz.com">
+  <meta property="og:type" content="website">
 
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="theme-color" content="#ffffff">
 
-        <link rel="stylesheet" href="https://andybrewer.github.io/mvp/mvp.css">
-        <style>
-         body {
-             padding: 0;
-         }
-         body > header {
-             max-width: none;
-             background-image: url("assets/img/bg13_.jpg");
-             background-size: cover;
-             background-position: center;
-             height: 100vh;
-             color: #fff;
-             padding: 2rem 2rem;
-         }
-         header > nav > ul > li > a {
-             color: #ffffff;
-         }
-         body > header > h1 {
-             text-shadow: 2px 2px 11px rgba(0,0,0,0.75);
-         }
-         body > header > p > a > b {
-             box-shadow: 0px 0px 50px 5px rgba(0,0,0,0.75);
-         }
-         footer {
-             text-align: center;
-         }
-         aside img {
-             color: red;
-         }
-         nav {
-             margin-bottom: 0;
-         }
+  <link rel="stylesheet" type="text/css" href="./style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo&display=swap" rel="stylesheet">
 
-         @media only screen and (max-width: 400px) {
-             header > nav > ul {
-                 display: none;
-             }
+  <script type="module" src="progress-ring.js"></script>
 
-             header > nav > a {
-                margin: auto;
-             }
-             #dev-partners  a {
-                 margin-bottom: 2rem;
-             }
-         }
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@100&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap" rel="stylesheet">
+  <title>Watergenics</title>
+</head>
 
-         @media only screen and (max-width: 800px) {
-             #dev-partners  a {
-                 margin-right: 2rem;
-                 margin-bottom: 2rem;
-             }
-         }
+<div class="wrapper">
+  <div class="overlay"></div>
+  <video autoplay muted loop>
+    <source src="images/bubbles.mp4" type="video/mp4">
+  </video>
+</div>
 
-         @media only screen and (min-width: 800px) {
-             #dev-partners  a {
-                 margin-right: 2rem;
-             }
-         }
-        </style>
-    </head>
+<body>
+  <header>
+    <div>
+      <img src="images/mark.svg">
+      <h1>Watergenics</h1>
+    </div>
+    <div class="subHeading">
+      <p>Making Water Quality Visible</p>
+      <progress-ring id="nitrate" label="Nitrates" unit="mg/L" stroke="4" radius="132" progress="80"></progress-ring>
+    </div>
+  </header>
 
-    <body>
-        <header>
-            <nav>
-                <a href="/">
-                    <img alt="Logo" src="assets/img/logo_white.svg" height="30">
-                </a>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#team">Team</a></li>
-                </ul>
-            </nav>
-            <h1>Real-Time Water-Quality Monitoring</h1>
-            <br>
-        </header>
-        <main>
-            <section id="about">
-                <header>
-                    <h2>
-                        We are developing a novel sensor and machine learning platform for effective nutrient management in aquaculture, agriculture and for environmental monitoring
-                    </h2>
-                    <br />
-                    <h2><i>Follow the Water</i></h2>
-                    <p><a href="https://forms.gle/FumkE9NryYvRSeSPA" target="_blank"><b>Request Demo &rarr;</b></a></p>
-                </header>
-            </section>
-            <article>
-                <header>
-                </header>
-                <article style="width:70%">
-                    <!-- <p>
-                         <img src="assets/img/globe-americas-solid.svg" alt="Globe" height="80" />
-                         </p> -->
-                    <h2>Problem</h2>
-                    <p>
-                        <aside>
-                            The poor management of nutrients in aquaculture and land agriculture especially nitrate and phosphorous
-                        </aside>
-                    </p>
-                    <p>
-                        This leads to
-                    </p>
-                    <ul>
-                        <li>
-                            An exhaustion of drinking water reserves worldwide
-                        </li>
-                        <li>
-                            Natural Ecosystems degradation
-                        </li>
-                        <li>
-                            Acute Shrinkage of Investment returns for all Natural-capital-based businesses
-                        </li>
-                    </ul>
+  <div class="parallax"></div>
 
-                    <hr />
+  <div class="infoBox">
+    <p>A novel sensor technology using advanced spectroscopy and machine learning to create the Water Data Platform for the Planet</p>
+  </div>
 
-                    <!-- <p>
-                         <img src="assets/img/lightbulb-solid.svg" alt="Globe" height="80" />
-                         </p> -->
-                    <h2>Solution</h2>
-                    <p>
-                        <aside>In-situ water quality sensor network to measure nutrient run-offs in real-time</aside>
-                    </p>
-                    <p>
-                        Our solution uses a new sensing technology and machine learning to measure nutrients in fisheries and in agricultural drainage systems.
-                        Our unique selling point is an affordable, accurate and autonomous sensor network for fish and plant nutrient management
-                    </p>
+  <img src="images/banner0.jpg">
 
-                    <hr />
+  <hr>
+  <h2>Manual testing takes time, is costly, and fails to capture localised events</h2>
+  <hr>
 
-                    <!-- <p>
-                         <img src="assets/img/people-arrows-solid.svg" alt="Globe" height="80" />
-                         </p> -->
-                    <h2>Mission</h2>
-                    <p><aside>Our mission is to foster the responsible use of water for food production</aside></p>
+  <img src="images/banner1.jpg">
 
-                    <!-- <hr /> -->
+  <div class="infoBox">
+    <p>Water quality drops in a matter of minutes</p>
+    <img src="images/fishSample.jpg">
+  </div>
 
-                    <!-- <p>
-                         <img src="assets/img/eye-solid.svg" alt="Globe" height="80" />
-                         </p> -->
-                    <!-- <h2>Vision</h2>
-                         <p><aside>A world-wide network of sensors to testify water quality.</aside></p>
-                         <p>Water is a fundamental right for every living organism. Making water quality visible everywhere, at any time, is our vision.</p> -->
+  <img src="images/banner2.jpg">
 
-                </article>
-            </article>
-            <hr />
+  <hr>
+  <h2>Keep track of your water parameters anytime, anywhere with our real-time, on-site sensors</h2>
+  <hr>
 
-            <section id="dev-partners">
-                <header>
-                    <h2>Development Partners</h2>
-                </header>
-                <p style="text-align: center;">
-                    <a href="http://www.crevetec.be">
-                        <img src="assets/img/partners/crevetec.png" alt="Crevetec" style="vertical-align: middle;"/>
-                    </a>
-                    <a href="http://www.zalf.de">
-                        <img src="assets/img/partners/logo_zalf.jpg" alt="Zalf" style="vertical-align: middle;"/>
-                    </a>
-                    <a href="https://www.izm.fraunhofer.de/">
-                        <img src="assets/img/partners/izm_190x52.gif" alt="Frauenhofer IZM" style="vertical-align: middle;"/>
-                    </a>
-                </p>
-            </section>
-            <hr />
+  <img src="images/banner3.jpg">
 
-            <section id="team">
-                <header>
-                    <h2>Team</h2>
-                </header>
-                <aside>
-                    <img src="assets/img/liviu.jpg">
-                    <h3>Liviu Mantescu</h3>
-                    <p>CEO & Founder</p>
-                    <p>
-                        <a href="https://www.linkedin.com/in/liviu-mantescu-dr-aa4005135/"><img src="assets/img/linkedin-brands.svg" alt="LinkeIn" height="30"/></a>
-                        <a href="https://twitter.com/liviu_mantescu"><img src="assets/img/twitter-square-brands.svg" alt="Twitter" height="30"/></a>
-                    </p>
-                    <p>
-                        <small>
-                            Political Economist and lobbyist for sustainable transformations in Industry 4.0 with 15+ years of experience
-                        </small>
-                    </p>
-                </aside>
-                <aside>
-                    <img src="assets/img/cs.jpeg">
-                    <h3>Cristian Serb</h3>
-                    <p>CTO & Co-Founder</p>
-                    <p>
-                        <a href="https://www.linkedin.com/company/watergenics/"><img src="assets/img/linkedin-brands.svg" alt="LinkeIn" height="30"/></a>
-                        <a href="https://twitter.com/cerbivore"><img src="assets/img/twitter-square-brands.svg" alt="Twitter" height="30"/></a>
-                    </p>
-                    <p>
-                        <small>
-                            Software Engineer with 20 years of experience building full-stack solutions
-                        </small>
-                    </p>
-                </aside>
-                <aside>
-                    <img src="assets/img/camille.jpg">
-                    <h3>Camille van Hoffelen</h3>
-                    <p>Machine Learning Engineer</p>
-                    <p>
-                        <a href="https://www.linkedin.com/in/camillevanhoffelen/"><img src="assets/img/linkedin-brands.svg" alt="LinkeIn" height="30"/></a>
-                    </p>
-                    <p>
-                        <small>
-                            ML Research Engineer with a focus on neuronal networks, ML infrastructure and software development
-                        </small>
-                    </p>
-                </aside>
-                <aside>
-                    <img src="assets/img/soraia.jpg">
-                    <h3>Soraia Dall Agnol</h3>
-                    <p>Product Design & Sales</p>
-                    <p>
-                        <a href="https://www.linkedin.com/in/soraiadallagnol/"><img src="assets/img/linkedin-brands.svg" alt="LinkeIn" height="30"/></a>
-                    </p>
-                    <p>
-                        <small>
-                            Zoologist with 10 years experience in aquaculture consultancy for fish nutrition technology
-                        </small>
-                    </p>
-                </aside>
-                <!-- <aside>
-                    <img src="assets/img/diego.jpg" height="285">
-                    <h3>Diego Gomez Canales</h3>
-                    <p>Engineering Consultancy</p>
-                    <p>
-                        <a href="https://www.linkedin.com/in/dgcberlin/"><img src="assets/img/linkedin-brands.svg" alt="LinkeIn" height="30"/></a>
-                    </p>
-                    <p>
-                        <small>
-                            Hardware Engineer with over 20 years experience in microsystem engineering and product development
-                        </small>
-                    </p>
-                </aside>
-                <aside>
-                     <img src="assets/img/niculae.jpg">
-                     <h3>Niculae Cantuniar</h3>
-                     <p>Advisor</p>
-                     <p>
-                     <a href="https://www.linkedin.com/in/cantuniar1niculae/"><img src="assets/img/linkedin-brands.svg" alt="LinkeIn" height="30"/></a>
-                     </p>
-                     <p>
-                     <small>
-                     Nic has over 40 years of leading international businesses, sales and marketing experience
-                     </small>
-                     </p>
-                     </aside> -->
-            </section>
-            <hr />
-            <section>
-                <header>
-                    <h2>Supported By</h2>
-                </header>
-                <p>
-                    <img src="assets/img/partners/bosch-300x300.jpg" alt="Bosch" height="150"/>
-                    <img src="assets/img/partners/esf-300x300.jpg" alt="ESF" height="150"/>
-                    <img src="assets/img/partners/eu-300x300.jpg" alt="Eu" height="150"/>
-                    <img src="assets/img/partners/senweb-300x300.jpg" alt="Senweb" height="150"/>
-                </p>
-            </section>
-        </main>
-        <footer>
-            <hr>
-            <h2>
-                Contact Info
-            </h2>
-            <p>
-                Watergenics UG<br>
-                c/o MotionLab ML GmbH<br>
-                Bouchéstr. 12 / Halle 20<br>
-                12435 Berlin<br>
-            </p>
-            <p>
-                Tel: +49 176 83478395 <br>
-                Email: <a href="mailto:liviu@watergenics.tech">liviu@watergenics.tech</a>
-            </p>
-            <p>
-                <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a>
-            </p>
-            <p>
-                <a href="https://www.linkedin.com/company/watergenics/"><img src="assets/img/linkedin-brands.svg" alt="LinkeIn" height="40"/></a>
-            </p>
-        </footer>
-    </body>
+  <div class="compare">
+    <div>
+      <img src="images/sensorIcon.png">
+      <h4>Watergenics</h4>
+      <h2>Sense 1.0</h2>
+      <table>
+        <tr>
+          <td>Accurate</td>
+          <td>Our sensor probes are designed to stay acurate in the harshest water environments.</td>
+        </tr>
+        <tr>
+          <td>Autonomous</td>
+          <td>Our plug-n-play sensor network is decentralized and maintenance-free simply replace or add new sensor kits
+            if needed.</td>
+        </tr>
+        <tr>
+          <td>Affordable</td>
+          <td>Our kits cost a fraction of the price of traditional sensors by using new hardware technologies and
+            machine learning.</td>
+        </tr>
+      </table>
+    </div>
+    <div>
+      <img src="images/platformIcon.png">
+      <h4>Watergenics</h4>
+      <h2>Data Platform</h2>
+      <table>
+        <tr>
+          <td>Real-time</td>
+          <td>Our sensors instantly push data to the cloud - access your actionable insights online</td>
+        </tr>
+        <tr>
+          <td>User-friendly</td>
+          <td>
+            Watergenic's network of sensors and Platform make environmental liability compliance easy to achieve. We
+            provide tailored solutions for aquaculture insurance, in particular.</td>
+        </tr>
+        <tr>
+          <td>Analytics</td>
+          <td>Our AI models analyse patterns in your data to help you improve your harvest and detect problems early.
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <img src="images/banner4.jpg">
+
+  <div class="infoBox">
+    We empower the responible use of water in aquaculture and agriculture
+  </div>
+
+  <hr>
+  <h1>Who is making it happen?</h1>
+  <hr>
+
+  <div class="team">
+    <div class="teammate">
+      <img src="images/team/sawaiz.jpg">
+      <h1>Sawaiz Syed</h1>
+      <h3>Sensor Engineer</h3>
+      <p>Apparently web designer now</p>
+    </div>
+    <div class="teammate">
+      <img src="images/team/sawaiz.jpg">
+      <h1>Sawaiz Syed</h1>
+      <h3>Sensor Engineer</h3>
+      <p>Apparently web designer now</p>
+    </div>
+    <div class="teammate">
+      <img src="images/team/sawaiz.jpg">
+      <h1>Sawaiz Syed</h1>
+      <h3>Sensor Engineer</h3>
+      <p>Apparently web designer now</p>
+    </div>
+    <div class="teammate">
+      <img src="images/team/sawaiz.jpg">
+      <h1>Sawaiz Syed</h1>
+      <h3>Sensor Engineer</h3>
+      <p>Apparently web designer now</p>
+    </div>
+    <div class="teammate">
+      <img src="images/team/sawaiz.jpg">
+      <h1>Sawaiz Syed</h1>
+      <h3>Sensor Engineer</h3>
+      <p>Apparently web designer now</p>
+    </div>
+    <div class="teammate">
+      <img src="images/team/sawaiz.jpg">
+      <h1>Sawaiz Syed</h1>
+      <h3>Sensor Engineer</h3>
+      <p>Apparently web designer now</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>Watergenics UG c/o MotionLab ML GmbH </p>
+    <p>Bouchéstr. 12 / Halle 20 12435 Berlin</p>
+    <p>Tel: +49 176 83478395</p>
+    <p>Email:<a href="mailto:liviu@watergenics.tech">liviu@watergenics.tech</a></p>
+    <p>Impressum | Datenschutz</p>
+  </footer>
+
+</body>
+
+<script>
+  var nitrateData = [58.109, 61.407, 58.109, 64.704, 61.407, 58.109, 58.109, 58.109, 58.109, 61.407, 61.407, 58.109, 61.407, 68.002, 71.299, 74.597, 74.597, 74.597, 81.192, 84.490, 87.787, 84.490, 87.787, 91.085, 87.787, 94.382, 94.382, 110.870, 94.382, 97.680, 94.382, 91.085, 91.085, 87.787, 91.085, 94.382, 91.085, 84.490, 87.787, 87.787, 87.787, 84.490, 81.192, 77.895, 61.407, 54.812, 54.812, 54.812, 48.216, 44.919, 51.514, 48.216, 54.812, 54.812, 48.216, 71.299, 51.514, 48.216, 58.109, 64.704, 61.407, 54.812, 58.109, 58.109, 48.216, 58.109, 54.812, 48.216, 54.812, 54.812, 51.514, 54.812, 58.109, 54.812, 61.407, 58.109, 61.407, 61.407, 61.407, 54.812, 58.109, 58.109, 58.109, 68.002, 64.704, 64.704, 68.002, 61.407, 64.704, 61.407, 61.407, 58.109, 54.812, 58.109, 54.812, 58.109, 54.812, 54.812, 54.812, 58.109, 54.812, 54.812, 58.109, 54.812, 54.812, 51.514, 58.109, 51.514, 58.109, 54.812, 54.812, 54.812, 58.109, 54.812, 54.812, 61.407, 58.109, 58.109, 58.109, 58.109, 58.109, 61.407, 61.407, 68.002, 68.002, 71.299, 74.597, 71.299, 74.597, 74.597, 74.597, 81.192, 81.192, 77.895, 77.895, 77.895, 77.895, 74.597, 71.299, 68.002, 71.299, 68.002, 61.407, 68.002, 68.002, 61.407, 61.407, 61.407, 61.407, 68.002, 64.704, 64.704, 61.407, 64.704, 58.109, 58.109, 58.109, 54.812, 61.407, 61.407, 64.704, 64.704, 61.407, 54.812, 61.407, 51.514, 58.109, 51.514, 51.514, 54.812, 54.812, 54.812, 54.812, 58.109, 54.812, 51.514, 54.812, 58.109, 58.109, 54.812, 54.812, 58.109, 54.812, 51.514, 58.109, 58.109, 54.812, 58.109, 54.812, 58.109, 58.109, 54.812, 61.407, 58.109, 54.812, 54.812, 58.109, 51.514, 54.812, 51.514, 51.514, 44.919, 54.812, 48.216, 48.216, 51.514, 54.812, 51.514, 44.919, 51.514, 48.216, 51.514, 54.812, 54.812, 48.216, 54.812, 54.812, 48.216, 48.216, 51.514, 54.812, 54.812, 51.514, 51.514, 54.812, 54.812, 54.812, 54.812, 54.812, 58.109, 58.109, 54.812, 58.109, 51.514, 54.812, 54.812, 58.109, 64.704, 71.299, 58.109, 54.812, 54.812, 54.812, 51.514, 41.621, 48.216, 44.919, 35.026, 35.026, 48.216, 41.621, 44.919, 41.621, 41.621, 48.216, 54.812, 54.812, 58.109, 51.514, 54.812, 54.812, 54.812, 51.514, 54.812, 54.812, 54.812, 54.812, 54.812, 51.514, 54.812, 54.812, 51.514, 51.514, 48.216, 48.216, 51.514, 48.216, 44.919, 51.514, 51.514, 51.514, 51.514, 54.812, 48.216, 54.812, 51.514, 54.812, 54.812, 51.514, 51.514, 54.812, 51.514, 54.812, 54.812, 54.812, 54.812, 54.812, 54.812, 58.109, 58.109, 58.109, 61.407, 58.109, 58.109, 61.407, 51.514, 58.109, 58.109, 58.109, 61.407, 61.407, 61.407, 58.109, 64.704, 64.704, 61.407, 61.407, 58.109, 64.704, 61.407, 64.704, 61.407, 68.002, 64.704, 64.704, 61.407, 61.407, 58.109, 61.407, 61.407, 68.002, 68.002, 64.704, 68.002, 71.299, 71.299, 68.002, 71.299, 71.299, 74.597, 71.299, 64.704, 71.299, 68.002, 68.002, 71.299, 68.002, 74.597, 61.407, 71.299, 68.002, 74.597, 74.597, 71.299, 71.299, 71.299, 77.895, 74.597, 71.299, 71.299, 71.299, 74.597, 68.002, 74.597, 71.299, 68.002, 68.002, 68.002, 71.299, 68.002, 74.597, 68.002, 68.002, 74.597, 68.002, 64.704, 68.002, 71.299, 68.002, 64.704, 68.002, 61.407, 64.704, 68.002, 68.002, 61.407, 68.002, 68.002, 68.002, 68.002, 64.704, 64.704, 61.407, 68.002, 64.704, 68.002, 68.002, 64.704, 68.002, 68.002, 61.407, 61.407, 64.704, 68.002, 64.704, 68.002, 71.299, 71.299, 61.407, 68.002, 64.704, 68.002, 68.002, 68.002, 68.002, 71.299, 64.704, 68.002, 71.299, 64.704, 64.704, 71.299, 64.704, 68.002, 68.002, 64.704, 68.002, 71.299, 64.704, 71.299, 68.002, 74.597, 68.002, 54.812, 64.704, 68.002, 64.704, 61.407, 61.407, 58.109, 54.812, 68.002, 64.704, 61.407, 71.299, 64.704, 68.002, 68.002, 71.299, 68.002, 71.299, 68.002, 74.597, 68.002, 71.299, 71.299, 64.704, 68.002, 64.704, 68.002, 71.299, 64.704, 64.704, 61.407, 68.002, 64.704, 64.704, 68.002, 61.407, 68.002, 68.002, 64.704, 61.407, 68.002, 68.002, 68.002, 61.407, 64.704, 61.407, 61.407, 68.002, 61.407, 61.407, 61.407, 61.407, 61.407, 61.407, 61.407, 61.407, 61.407, 61.407, 61.407, 64.704, 58.109, 61.407, 58.109, 61.407, 58.109, 61.407, 61.407, 61.407, 61.407, 61.407, 64.704, 61.407, 64.704, 64.704, 64.704, 61.407, 64.704, 68.002, 81.192, 84.490, 91.085, 94.382, 104.275, 104.275, 107.573, 104.275, 100.978, 94.382, 77.895, 137.251, 91.085, 94.382, 117.465, 97.680, 91.085, 87.787, 87.787, 94.382, 94.382, 91.085, 87.787, 81.192, 87.787, 91.085, 84.490, 77.895, 87.787, 87.787, 91.085, 91.085, 87.787, 84.490, 81.192, 91.085, 81.192, 81.192, 77.895, 77.895, 81.192, 77.895, 87.787, 84.490, 84.490, 84.490, 84.490, 91.085, 91.085, 97.680, 97.680, 94.382, 100.978, 100.978, 104.275, 100.978, 97.680, 110.870, 114.168, 110.870, 120.763, 104.275, 110.870, 100.978, 110.870, 107.573, 104.275, 104.275, 104.275, 104.275, 100.978, 107.573, 100.978, 107.573, 107.573, 104.275, 94.382, 100.978, 97.680, 94.382, 100.978, 104.275, 97.680, 97.680, 94.382, 94.382, 94.382, 94.382, 97.680, 104.275, 107.573, 104.275, 117.465, 114.168, 127.358, 120.763, 130.656, 133.953, 120.763, 143.846, 127.358, 130.656, 137.251, 137.251, 140.548, 137.251, 133.953, 133.953, 133.953, 120.763, 130.656, 133.953, 127.358, 137.251, 127.358, 127.358, 124.061, 127.358, 127.358, 114.168, 124.061, 117.465, 110.870, 114.168, 110.870, 114.168, 110.870, 110.870, 107.573, 104.275, 97.680, 87.787, 81.192, 77.895, 81.192, 71.299, 71.299, 71.299, 68.002, 68.002, 71.299, 64.704, 64.704, 68.002, 64.704, 64.704, 64.704, 61.407, 64.704, 64.704, 71.299, 64.704, 71.299, 71.299, 68.002, 68.002, 71.299, 68.002, 61.407, 64.704, 58.109, 61.407, 58.109, 58.109, 58.109, 61.407, 61.407, 54.812, 58.109, 58.109, 54.812, 58.109, 54.812, 54.812, 54.812, 48.216, 51.514, 51.514, 54.812, 54.812, 51.514, 51.514, 51.514, 48.216, 51.514, 51.514, 44.919, 51.514, 51.514, 54.812, 51.514, 54.812, 54.812, 54.812, 51.514, 48.216, 54.812];
+  var pointer = 0;
+  setInterval(function(){ 
+    var nitrate = document.getElementById("nitrate");
+    nitrate.setAttribute("progress", nitrateData[pointer]);
+    pointer = ( pointer +1 ) % nitrateData.length;
+  }, 100);
+  
+  
+</script>
+
 </html>

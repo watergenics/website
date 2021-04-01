@@ -1,0 +1,174 @@
+:root {
+    --PRI-A:#407EC9;
+    --PRI-B:#1F2A44;
+    --SEC-A:#9BCBEB;
+    --SEC-B:#E5EAEF;
+}
+
+html {
+    font-family: 'Archivo', sans-serif;
+    font-size: 125%;
+    color: var(--SEC-B);
+    margin: 0 auto;
+    overflow-x: hidden;
+    background: var(--PRI-B);
+}
+
+/* Background Video */
+video {
+    position: relative;
+    top:  -3vh;
+    width: 100%;
+    filter:blur(15px) brightness(1.0);
+    z-index: -4;
+  }
+
+.overlay{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0), rgba(31,42,68,0.4) 60%, rgba(31,42,68,1) 90%, rgba(31,42,68,1));
+    z-index: -3;
+}
+
+.wrapper{
+    position: relative;
+    background: var(--PRI-B);
+    height: auto;
+    left: -1vw;
+    top:  -1vh;
+    width: 104vw;
+    z-index: -5;
+}
+
+/* Parallax */
+.parallax{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    min-height: 100%;
+    min-width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background: var(--PRI-B);
+    /* background: linear-gradient(120deg, var(--PRI-B), var(--SEC-A)); */
+    /* background: linear-gradient(120deg, var(--PRI-B) ,var(--PRI-B) 29%, orange 29% , yellow 29.4%, green 29.8%, cyan 30.2%, blue 30.6%, violet 31% ,var(--PRI-B) 31%, black); */
+    z-index: -6;
+
+}
+
+/* Header */
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    margin: 5vw;
+}
+
+header div{
+    display: flex;
+    align-items: center; /* align vertical */
+}
+
+header h1{
+    font-size: 6em;
+}
+
+header img{
+    height: 4.4em;
+    margin: 1em 0.8em;
+}
+
+header p{
+    display: flex;
+    font-size: 3em;
+    margin: 1em;
+}
+
+.subHeading{
+    position: absolute;
+    top: 25vw;
+    right: 5vw;
+    margin: 5vw;
+}
+
+/* Secton images */
+body>img{
+    width:100%;
+}
+
+/* Team */
+.team{
+    display: flex;
+}
+
+.teammate{
+    margin: 10px;
+}
+
+.teammate img{
+    width: 100%;
+    border-radius: 50% 10% 50% 50%;
+}
+
+h1, h2, h3, h4, h1+p, p{
+    text-align: center;
+    margin: 0;
+}
+
+.infoBox, .compare{
+    display: flex;
+    font-size: 5vh;
+    background-color: #407EC955;
+    padding: 4%;
+    text-align: center;
+    align-items: center;
+    filter: drop-shadow(15px 15px 15px #000);
+    /* border: solid; */
+    border-radius: 5vh;
+    border-width: 5px;
+    border-color: var(--SEC-B);
+    width: 60%;
+    margin: 2% auto;
+}
+
+.infoBox p{
+    opacity: 100%;
+}
+
+.infoBox img{
+    border-radius: 5vh;
+    width: 50%;
+}
+
+.compare div{
+    width: 100%;
+}
+
+table{
+    font-size: 0.5em;
+    text-align: left;
+    padding: 10px;
+}
+
+tr td:first-child{
+    padding-right: 10px;
+    font-size: 1.5em;
+    color: var(--SEC-A);
+}
+
+footer{
+    font-size: 1em;
+    text-align: center;
+    border: solid;
+    border-radius: 5vh;
+    border-width: 10px;
+    margin: 0 30vw;
+    background-color: var(--PRI-A);
+}
