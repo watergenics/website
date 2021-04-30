@@ -8605,13 +8605,23 @@ input, select, textarea {
 
 
 /* Local Styles */
-video {
-	filter: blur(10px);
-	height: 100%;
+.spotlight .image {
+	background-color: white;
 }
 
 .banner .image {
 	background-color: #233346;
+}
+
+.banner .image div{
+	position: absolute;
+	bottom: 5vh;
+	z-index: 10;
+	background-color: rgba(0, 0, 0, 0.75);
+	color: white;
+	padding: 10px;
+	margin: 5%;
+	border-radius: 20px;
 }
 
 .image {
@@ -8622,7 +8632,7 @@ video {
 	text-align: center;
 }
 
-.banner div img {
+.banner .content img {
 	width: 80%;
 	padding: 5%;
 }
@@ -8660,8 +8670,8 @@ video {
 		align-items: center;
 	}
 
-	.banner div img {
-		width: 50%;
-		padding: 5%;
+	.banner .image div{
+		font-size: 0.8em;
+		bottom: 1vh;
 	}
 }
